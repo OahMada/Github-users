@@ -12,11 +12,10 @@ var root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<Auth0Provider
 		domain={process.env.REACT_APP_AUTH0_DOMAIN}
-		clientId={process.env.REACT_APP_AUTHO_CLIENTID}
+		clientId={process.env.REACT_APP_AUTH0_CLIENT_ID}
 		redirectUri={window.location.origin}
+		cacheLocation='localstorage'
 	>
-		{console.log(process.env.REACT_APP_AUTH0_CLIENT_ID)}
-		{console.log(process.env.REACT_APP_AUTH0_DOMAIN)}
 		<React.StrictMode>
 			<GithubProvider>
 				<App />
